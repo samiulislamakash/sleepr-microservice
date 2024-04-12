@@ -1,5 +1,6 @@
 import {
   IsDefined,
+  IsEmail,
   IsNotEmptyObject,
   IsNumber,
   ValidateNested,
