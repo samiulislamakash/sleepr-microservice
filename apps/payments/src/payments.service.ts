@@ -37,7 +37,10 @@ export class PaymentsService {
     //   currency: 'usd',
     // });
 
-    this.notificationsService.emit('notify_email', { email });
+    this.notificationsService.emit('notify_email', {
+      email,
+      text: `Your payment of $${amount} has complete successfully.`,
+    });
 
     return {
       id: (Math.random() + 1).toString(36).substring(7),
