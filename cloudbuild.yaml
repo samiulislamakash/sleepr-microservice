@@ -1,6 +1,6 @@
 steps:
 #Reservations
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker:latest'
     args: [
       'build',
       '-t',
@@ -9,14 +9,14 @@ steps:
       'apps/reservations/Dockerfile',
       '.'
     ]
-    name: 'gcr.io/cloud-builders/docker'
+    name: 'gcr.io/cloud-builders/docker:latest'
     args: [
       'push',
       'asia-southeast1-docker.pkg.dev/sleepr-420204/reservations/production_reservations'
     ]
 
 #Auth
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker:latest'
     args: [
       'build',
       '-t',
@@ -25,14 +25,14 @@ steps:
       'apps/auth/Dockerfile',
       '.'
     ]
-    name: 'gcr.io/cloud-builders/docker'
+    name: 'gcr.io/cloud-builders/docker:latest'
     args: [
       'push',
       'asia-southeast1-docker.pkg.dev/sleepr-420204/auth/production_auth'
     ]
 
 #Notifications
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker:latest'
     args: [
       'build',
       '-t',
@@ -41,14 +41,14 @@ steps:
       'apps/notifications/Dockerfile',
       '.'
     ]
-    name: 'gcr.io/cloud-builders/docker'
+    name: 'gcr.io/cloud-builders/docker:latest'
     args: [
       'push',
       'asia-southeast1-docker.pkg.dev/sleepr-420204/notifications/production_notifications'
     ]
 
 #Payments
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker:latest'
     args: [
       'build',
       '-t',
@@ -57,7 +57,7 @@ steps:
       'apps/payments/Dockerfile',
       '.'
     ]
-    name: 'gcr.io/cloud-builders/docker'
+    name: 'gcr.io/cloud-builders/docker:latest'
     args: [
       'push',
       'asia-southeast1-docker.pkg.dev/sleepr-420204/payments/production_payments'
